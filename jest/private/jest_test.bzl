@@ -87,6 +87,10 @@ def _impl(ctx):
         fixed_args.append("--runInBand")
     if ctx.attr.update_snapshots_mode:
         fixed_args.append("--updateSnapshot")
+    if ctx.attr.detect_open_handles:
+        fixed_args.append("--detectOpenHandles")
+    if ctx.attr.force_exit:
+        fixed_args.append("--forceExit")
 
     fixed_env = {}
     if ctx.attr.update_snapshots_mode:

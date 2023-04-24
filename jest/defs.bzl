@@ -55,6 +55,8 @@ def jest_test(
         auto_configure_test_sequencer = True,
         snapshots_ext = ".snap",
         quiet_snapshot_updates = False,
+		detect_open_handles = False,
+		force_exit = False,
         timeout = None,
         size = None,
         **kwargs):
@@ -246,6 +248,8 @@ def jest_test(
         config = config,
         data = data + snapshot_data,
         run_in_band = run_in_band,
+		detect_open_handles = detect_open_handles,
+		force_exit = force_exit,
         colors = colors,
         auto_configure_reporters = auto_configure_reporters,
         auto_configure_test_sequencer = auto_configure_test_sequencer,
@@ -290,6 +294,8 @@ def jest_test(
             # data deps the config requires
             data = data,
             run_in_band = run_in_band,
+			detect_open_handles = detect_open_handles,
+			force_exit = force_exit,
             colors = colors,
             auto_configure_reporters = auto_configure_reporters,
             auto_configure_test_sequencer = auto_configure_test_sequencer,
